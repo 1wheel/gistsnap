@@ -1,0 +1,35 @@
+{
+  "name": "gist-snap",
+  "version": "0.0.0",
+  "description": "snapshot thumbnails for bl.ocks.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1wheel/gist-snap.git"
+  },
+  "keywords": [
+    "gist",
+    "bl.ocks",
+    "d3",
+    "image"
+  ],
+  "author": {
+    "name": "Adam Pearce",
+    "url": "http://roadtolarissa.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1wheel/gist-snap/issues"
+  },
+  "homepage": "https://github.com/1wheel/gist-snap#readme",
+  "dependencies": {
+    "d3": "^4.2.2",
+    "express": "^4.14.0",
+    "glob": "^7.0.5",
+    "serve-static": "^1.11.1",
+    "webshot": "^0.18.0"
+  }
+}
