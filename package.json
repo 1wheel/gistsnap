@@ -1,6 +1,6 @@
 {
   "name": "gist-snap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,9 @@
     "name": "Adam Pearce",
     "url": "http://roadtolarissa.com/"
   },
+  "bin": {
+    "gist-snap": "./index.js"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/1wheel/gist-snap/issues"
@@ -29,7 +32,9 @@
     "d3": "^4.2.2",
     "express": "^4.14.0",
     "glob": "^7.0.5",
+    "lwip": "0.0.9",
+    "minimist": "^1.2.0",
     "serve-static": "^1.11.1",
-    "webshot": "^0.18.0"
+    "webshot": "github:brenden/node-webshot#pull/150/head"
   }
 }
