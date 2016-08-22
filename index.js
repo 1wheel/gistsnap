@@ -66,9 +66,9 @@ function snapPreview(cb){
   var options = {
     screenSize: {width: 960, height: 500},
     shotSize:   {width: 960, height: 500},
-    renderDelay: 3000
+    renderDelay: 5000
   }
-  
+
   var url = argv.user ? 
     `http://bl.ocks.org/${argv.user}/raw/${gistID}` : 
     `http://localhost:${port}/index.html`

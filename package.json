@@ -1,10 +1,10 @@
 {
   "name": "gist-snap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no tests\""
   },
   "repository": {
     "type": "git",
