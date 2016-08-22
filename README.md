@@ -4,7 +4,7 @@ snapshot thumbnails for [bl.ocks.org](http://bl.ocks.org/)
 
 # Usage 
 
-Install with 
+Install:
 
     npm install -g gist-snap
 
