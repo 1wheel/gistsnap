@@ -14,7 +14,7 @@ Then, navigate to the directory with your gist and run:
 
 This takes creates a `preview.png` and `thumbnail.png` of your `index.html` and commits/pushes them. 
 
-gist-snap is conservative - if you don't have an `index.html` in your folder, if the images files already exist in the folder, or if your local files aren't in sync with origin/master, it will exit without modifying anything. 
+gist-snap is conservative - if you don't have an `index.html` in your folder, if the images files already exist, or if your local files aren't in sync with origin/master, it will exit without modifying anything. 
 
 If you've set up your bl.ocks to share common files, like [Let's Make a Block](https://bost.ocks.org/mike/block/) suggests, pass your user name to take a screen shot of bl.ocks directly:  
 
