@@ -1,6 +1,6 @@
 {
   "name": "gist-snap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
   "scripts": {
