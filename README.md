@@ -24,6 +24,13 @@ If you've got all of your gists in one folder, you can add images to all of them
 
     for d in ./*/ ; do (cd "$d" && printf '\n%s\n' "${PWD##*/}" && gist-snap); done
 
+
+Options: 
+
+    --overwrite - overwrites existing image files
+    --nocommit - doesn't commit or push to remote
+    --delay <delay> - milliseconds to wait before screenshot
+
 # More scripts
 
 [gistup](https://github.com/mbostock/gistup) is super handy for creating gists from the command line. 
