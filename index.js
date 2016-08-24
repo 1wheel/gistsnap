@@ -39,11 +39,17 @@ function fileCheck(cb){
 
 //make sure that working directory is in sync with origin/master
 function gitCheck(cb){
-  child.exec('git fetch && git status && git remote -v', function(err, stdout, stderr){
-    if (!err && stderr) err = stderr
-    if (!err && !~stdout.indexOf('On branch master')) err = 'not on master'
-    if (!err && !~stdout.indexOf("Your branch is up-to-date with 'origin/master'.")) err = 'not synced with origin/master'
-    if (!err && !~stdout.indexOf('nothing to commit, working directory clean')) err = 'uncommited local changes'
+  child.exec('git version && git fetch && git status && git remote -v', function(err, stdout, stderr){
+    if (!err && stderr) 
+      err = stderr
+    if (!err && !~stdout.indexOf('git version 2'))
+      err = 'gist-snap requires git version 2 '
+    if (!err && !~stdout.indexOf('On branch master'))
+      err = 'not on master'
+    if (!err && !~stdout.indexOf("Your branch is up-to-date with 'origin/master'."))
+      err = 'not synced with origin/master'
+    if (!err && !~stdout.indexOf('nothing to commit, working directory clean'))
+      err = 'uncommited local changes'
 
     if (!err) gistID = stdout.split('git@gist.github.com:')[1].split('.git')[0]
     cb(err)
