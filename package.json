@@ -1,6 +1,6 @@
 {
   "name": "gist-snap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "glob": "^7.0.5",
     "lwip": "0.0.9",
     "minimist": "^1.2.0",
+    "nightmare": "^2.7.0",
     "serve-static": "^1.11.1",
-    "webshot": "github:brenden/node-webshot#pull/150/head"
   }
 }

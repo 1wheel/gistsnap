@@ -5,7 +5,8 @@ var glob = require('glob'),
     serveStatic = require('serve-static'),
     d3 = require('d3'),
     child = require('child_process'),
-    webshot = require('webshot')
+    webshot = require('webshot'),
+    Nightmare = require('nightmare')
 
 var argv = require('minimist')(process.argv.slice(2))
 
@@ -62,7 +63,6 @@ function gitCheck(cb){
     if (!stderr) gistID = stdout.split('git@gist.github.com:')[1].split('.git')[0]
     if (err) err = err + '\n' + 'to skip making a new commit, run gist-snap --nocommit'
 
-
     cb(err)
   })
 }
@@ -80,19 +80,15 @@ function initServer(cb){
 
 
 function snapPreview(cb){
-  var options = {
-    screenSize: {width: 960, height: 500},
-    shotSize:   {width: 960, height: 500},
-    renderDelay: argv.delay && argv.delay !== true ? argv.delay : 3000
-  }
-
   var url = argv.user ? 
     `http://bl.ocks.org/${argv.user}/raw/${gistID}` : 
     `http://localhost:${port}/index.html`
 
-  webshot(url, 'preview.png', options, function(err){
-    cb(err)
-  })
+  new Nightmare()
+    .viewport(960, 500)
+    .goto(url)
+    .screenshot('preview.png')
+    .run(cb)
 }
 
 
@@ -102,9 +98,7 @@ function resizeThumb(cb){
 
     image.batch()
       .resize(230, 120)
-      .writeFile('thumbnail.png', function(err){
-        cb(err)
-      })
+      .writeFile('thumbnail.png', cb)
   })
 }
 
