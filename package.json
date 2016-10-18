@@ -35,6 +35,6 @@
     "lwip": "0.0.9",
     "minimist": "^1.2.0",
     "nightmare": "^2.7.0",
-    "serve-static": "^1.11.1",
+    "serve-static": "^1.11.1"
   }
 }
