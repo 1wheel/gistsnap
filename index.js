@@ -5,7 +5,6 @@ var glob = require('glob'),
     serveStatic = require('serve-static'),
     d3 = require('d3'),
     child = require('child_process'),
-    webshot = require('webshot'),
     Nightmare = require('nightmare')
 
 var argv = require('minimist')(process.argv.slice(2))
