@@ -35,6 +35,7 @@ function snapPreview(cb){
     .viewport(960, 500)
     .goto(`http://localhost:${port}/index.html`)
     .wait(argv.delay || 3000)
+    // .evaluate(d => document.querySelector('html').style.overflow = 'hidden')
     .screenshot('preview.png')
     .run(cb)
 }
