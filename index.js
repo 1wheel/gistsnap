@@ -31,11 +31,11 @@ function initServer(cb){
 
 //screen shot index.html
 function snapPreview(cb){
-  new Nightmare()
+  new Nightmare({show: true})
     .viewport(960, 500)
     .goto(`http://localhost:${port}/index.html`)
+    .evaluate(() => document.querySelector('html').style.overflow = 'hidden' )
     .wait(argv.delay || 3000)
-    // .evaluate(d => document.querySelector('html').style.overflow = 'hidden')
     .screenshot('preview.png')
     .run(cb)
 }
