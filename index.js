@@ -3,7 +3,8 @@
 var express = require('express'),
     serveStatic = require('serve-static'),
     d3 = require('d3'),
-    Nightmare = require('nightmare')
+    Nightmare = require('nightmare'),
+    sharp = require('sharp');
 
 var argv = require('minimist')(process.argv.slice(2))
 
@@ -14,7 +15,7 @@ d3.queue(1)
   .defer(initServer)
   .defer(snapPreview)
   .defer(resizeThumb)
-  .awaitAll(function(err, res){
+  .await(function(err, res){
     console.log(err || 'gist-snap finished')
 
     process.exit()
@@ -41,11 +42,7 @@ function snapPreview(cb){
 
 //generate thumbnail
 function resizeThumb(cb){
-  require('lwip').open('preview.png', function(err, image){
-    if (err) cb(err)
-
-    image.batch()
-      .resize(230, 120)
-      .writeFile('thumbnail.png', cb)
-  })
+  sharp('preview.png')
+    .resize(230, 120)
+    .toFile('thumbnail.png', cb)
 }

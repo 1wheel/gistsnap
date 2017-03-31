@@ -1,6 +1,6 @@
 {
   "name": "gist-snap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
   "scripts": {
@@ -30,11 +30,11 @@
   "homepage": "https://github.com/1wheel/gist-snap#readme",
   "dependencies": {
     "d3": "^4.2.2",
+    "electron": "^1.6.2",
     "express": "^4.14.0",
-    "glob": "^7.0.5",
-    "lwip": "0.0.9",
     "minimist": "^1.2.0",
-    "nightmare": "^2.7.0",
-    "serve-static": "^1.11.1"
+    "nightmare": "^2.10.0",
+    "serve-static": "^1.11.1",
+    "sharp": "^0.17.2"
   }
 }
