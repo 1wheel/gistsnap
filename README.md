@@ -20,5 +20,5 @@ Options:
 
 # More scripts
 
-[gistup](https://github.com/mbostock/gistup) is super handy for creating gists from the command line. 
-[gistclone](https://github.com/1wheel/gistclone) clone bl.ocks without waiting for the clucky gist webapp. 
+- [gistup](https://github.com/mbostock/gistup) is super handy for creating gists from the command line. 
+- [gistclone](https://github.com/1wheel/gistclone) clone bl.ocks without waiting for the clucky gist webapp. 
