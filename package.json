@@ -1,5 +1,5 @@
 {
-  "name": "gist-snap",
+  "name": "gistsnap",
   "version": "1.0.2",
   "description": "snapshot thumbnails for bl.ocks.org",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1wheel/gist-snap.git"
+    "url": "git+https://github.com/1wheel/gistsnap.git"
   },
   "keywords": [
     "gist",
@@ -21,13 +21,13 @@
     "url": "http://roadtolarissa.com/"
   },
   "bin": {
-    "gist-snap": "./index.js"
+    "gistsnap": "./index.js"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/1wheel/gist-snap/issues"
+    "url": "https://github.com/1wheel/gistsnap/issues"
   },
-  "homepage": "https://github.com/1wheel/gist-snap#readme",
+  "homepage": "https://github.com/1wheel/gistsnap#readme",
   "dependencies": {
     "d3": "^4.2.2",
     "electron": "^1.6.2",
