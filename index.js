@@ -32,7 +32,7 @@ function initServer(cb){
 
 //screen shot index.html
 function snapPreview(cb){
-  new Nightmare({show: true})
+  new Nightmare({show: !argv.hidden})
     .viewport(960, 500)
     .goto(`http://localhost:${port}/index.html`)
     .evaluate(() => document.querySelector('html').style.overflow = 'hidden' )
