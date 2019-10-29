@@ -16,7 +16,7 @@ d3.queue(1)
   .defer(snapPreview)
   .defer(resizeThumb)
   .await(function(err, res){
-    console.log(err || 'gist-snap finished')
+    console.log(err || 'gistsnap finished')
 
     process.exit()
   })

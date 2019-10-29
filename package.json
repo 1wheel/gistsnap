@@ -1,7 +1,7 @@
 {
   "name": "gistsnap",
-  "version": "1.0.3",
-  "description": "snapshot thumbnails for bl.ocks.org",
+  "version": "1.0.4",
+  "description": "snapshot thumbnails for blocks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"no tests\""

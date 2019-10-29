@@ -1,6 +1,6 @@
 # gistsnap
 
-snapshot thumbnails for [bl.ocks.org](http://bl.ocks.org/)
+snapshot thumbnails for [blocks](http://blocks.roadtolarissa.com)
 
 # Usage 
 
@@ -22,4 +22,5 @@ Options:
 # More scripts
 
 - [gistup](https://github.com/mbostock/gistup) is super handy for creating gists from the command line. 
-- [gistclone](https://github.com/1wheel/gistclone) clone bl.ocks without waiting for the clucky gist webapp. 
+- [gistclone](https://github.com/1wheel/gistclone) clone blocks without waiting for the clucky gist webapp. 
+- [d3-init](https://github.com/1wheel/d3-init) lists the block workflow I use.
