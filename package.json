@@ -1,6 +1,6 @@
 {
   "name": "gistsnap",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "snapshot thumbnails for blocks",
   "main": "index.js",
   "scripts": {
@@ -33,8 +33,8 @@
     "electron": "^1.6.2",
     "express": "^4.14.0",
     "minimist": "^1.2.0",
-    "nightmare": "^2.10.0",
+    "puppeteer": "^3.0.4",
     "serve-static": "^1.11.1",
-    "sharp": "^0.17.2"
+    "sharp": "^0.25.2"
   }
 }

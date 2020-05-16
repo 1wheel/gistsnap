@@ -3,13 +3,12 @@
 var express = require('express'),
     serveStatic = require('serve-static'),
     d3 = require('d3'),
-    Nightmare = require('nightmare'),
+    puppeteer = require('puppeteer'),
     sharp = require('sharp');
 
 var argv = require('minimist')(process.argv.slice(2))
 
 var port = 3870
-var gistID = null
 
 d3.queue(1)
   .defer(initServer)
@@ -31,14 +30,20 @@ function initServer(cb){
 }
 
 //screen shot index.html
-function snapPreview(cb){
-  new Nightmare({show: !argv.hidden})
-    .viewport(960, 500)
-    .goto(`http://localhost:${port}/index.html`)
-    .evaluate(() => document.querySelector('html').style.overflow = 'hidden' )
-    .wait(argv.delay || 3000)
-    .screenshot('preview.png')
-    .run(cb)
+async function snapPreview(cb){
+  var browser = await puppeteer.launch({headless: argv.headless})
+  var page = await browser.newPage()
+  await page.setViewport({width: 960, height: 500})
+  await page.goto(`http://localhost:${port}/index.html`)
+  await page.evaluate(() => document.querySelector('html').style.overflow = 'hidden')
+  await sleep(argv.delay || 3000)
+  await page.screenshot({path: 'preview.png'})
+
+  browser.close()
+
+  cb()
+
+  function sleep(ms){ return new Promise(resolve => setTimeout(resolve, ms)) }
 }
 
 //generate thumbnail
