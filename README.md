@@ -17,7 +17,6 @@ This takes creates a `preview.png` and `thumbnail.png` of your `index.html`, ove
 Options: 
 
     --delay <delay> - milliseconds to wait before screenshot
-    --hidden - start nightmarejs with {show: false}
 
 # More scripts
 
