@@ -30,11 +30,10 @@
   "homepage": "https://github.com/1wheel/gistsnap#readme",
   "dependencies": {
     "d3": "^4.2.2",
-    "electron": "^1.6.2",
     "express": "^4.14.0",
     "minimist": "^1.2.0",
     "puppeteer": "^3.0.4",
     "serve-static": "^1.11.1",
-    "sharp": "^0.25.2"
+    "sharp": "^0.31.2"
   }
 }
