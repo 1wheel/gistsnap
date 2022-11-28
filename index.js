@@ -31,7 +31,7 @@ function initServer(cb){
 
 //screen shot index.html
 async function snapPreview(cb){
-  var browser = await puppeteer.launch({headless: argv.headless})
+  var browser = await puppeteer.launch({headless: false})
   var page = await browser.newPage()
   await page.setViewport({width: 960, height: 500})
   await page.goto(`http://localhost:${port}/index.html`)
